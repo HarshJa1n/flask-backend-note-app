@@ -1,0 +1,6 @@
+flask
+pyngrok
+werkzeug
+flask-cors
+openai
+pymongo[srv]
