@@ -9,6 +9,8 @@ import os
 import datetime
 import subprocess
 import json
+from dotenv import load_dotenv
+load_dotenv()
 
 
 
@@ -151,9 +153,4 @@ def get_transcription(document_id):
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    # Setup ngrok
-    NGROK_AUTHTOKEN = os.getenv('NGROK_AUTHTOKEN')
-    ngrok.set_auth_token(NGROK_AUTHTOKEN)
-    ngrok_tunnel = ngrok.connect(5000)
-    print(f'Public URL: {ngrok_tunnel.public_url}')
-    app.run()
+    app.run(debug=True)

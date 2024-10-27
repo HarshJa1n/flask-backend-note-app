@@ -4,3 +4,4 @@ werkzeug
 flask-cors
 openai
 pymongo[srv]
+python-dotenv
